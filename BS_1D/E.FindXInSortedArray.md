@@ -10,7 +10,7 @@ public class Solution{
         int low = 0;
         int high = n-1;
         
-        while(n>0) {
+        while(low<=high) {
             int mid = (low+high)/2;
 
             if(nums[mid] == target) return mid;
@@ -24,6 +24,8 @@ public class Solution{
 ```
 
 ## 2. Recursive Approach
+
+
 ``` java
 
 public class Solution {
