@@ -14,7 +14,7 @@ public class Solution{
             int mid = (low+high)/2;
 
             if(nums[mid] == target) return mid;
-            else if(nums[mid] <= target) low = mid + 1;
+            else if(nums[mid] < target) low = mid + 1;
             else high = mid -1;
         }
         return -1;
@@ -34,7 +34,7 @@ public class Solution {
 
         int mid = (low+high)/2;
         if(nums[mid] == target) return mid;
-        else if(nums[mid] >= target)
+        else if(nums[mid] > target)
            return binarySearch(nums, low, mid-1, target);
         else return binarySearch(nums, mid+1, high, target);
     }
